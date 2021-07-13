@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+.body {
+    background-color: #F6F5FA;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+.plan {
+    background-color: #FFFFFF;
+    font-family: 'Inter', sans-serif;
+    padding: 24px;
+    border-radius: 24px;
+    border: none;
+    transition: 0.2s;
+    color: #181059;
+}
+
+.plan:hover {
+    background-color: #181059;
+    color: #ffffff;
+}
+
+.plan-heading {
+    font-size: 24px;
+}
+
+.plan-feature {
+    list-style: none;
+    padding: 0px;
+}
+
+.plan-feature li:before {
+    content: "✓";
+    margin-right: 16px;
+}
+
+.plan-feature li {
+    margin-bottom: 16px;
+    display: flex;
+}
+
+.plan-amount {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.plan-duration {
+    opacity: 0.6;
+}
+
+.plan-feature li:last-child:before {
+    content: "x";
+}
+
+.plan-feature li:last-child {
+    opacity: 0.3;
+}
+
+.plan-choose {
+    width: 100%;
+    background-color: #8645ff;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+}
+
+.plan-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.plan-save {
+    background: white;
+    border: none;
+    padding: 5px;
+    border-radius: 4px;
+    color: #8645ff;
+    font-weight: bold;
+}
+
+.plan:first-child .plan-feature li {
+    opacity: 0.3;
+}
+
+.plan:first-child .plan-feature li:first-child {
+    opacity: 1;
+}
+
+.plan:first-child .plan-feature li:nth-child(n+2):before {
+    content: "x";
+}
+
+.plan:nth-child(2) .plan-feature li:nth-child(n+3) {
+    opacity: 0.3;
+}
+
+.plan:nth-child(4) .plan-feature li {
+    opacity: 1;
+}
+
+.plan:nth-child(4) .plan-feature li:before {
+    content: "✓";
+}
+
+.plan-options {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr;
+}
+
+@media(min-width:440px) {
+    .plan-options {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media(min-width:740px) {
+    .plan-options {
+        /*grid-template-columns:1fr 1fr 1fr 1fr;*/
+        grid-template-columns: repeat(4, 1fr)
+    }
+}
+
+.plan:hover {
+    transform: scale(1.1);
+}
